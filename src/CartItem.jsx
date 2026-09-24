@@ -50,6 +50,10 @@ const CartItem = ({ onContinueShopping }) => {
     return price * item.quantity;
   };
 
+  const handleCheckout = () => {
+    alert('Functionality Coming Soon');
+  };
+
   return (
     <div className="cart-container">
       <h2 style={{ color: 'black' }}>
@@ -66,8 +70,13 @@ const CartItem = ({ onContinueShopping }) => {
             />
 
             <div className="cart-item-details">
-              <div className="cart-item-name">{item.name}</div>
-              <div className="cart-item-cost">{item.cost}</div>
+              <div className="cart-item-name">
+                {item.name}
+              </div>
+
+              <div className="cart-item-cost">
+                {item.cost}
+              </div>
 
               <div className="cart-item-quantity">
                 <button
@@ -112,14 +121,17 @@ const CartItem = ({ onContinueShopping }) => {
       <div className="continue_shopping_btn">
         <button
           className="get-started-button"
-          onClick={(e) => handleContinueShopping(e)}
+          onClick={handleContinueShopping}
         >
           Continue Shopping
         </button>
 
         <br />
 
-        <button className="get-started-button1">
+        <button
+          className="get-started-button1"
+          onClick={handleCheckout}
+        >
           Checkout
         </button>
       </div>
